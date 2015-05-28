@@ -1,0 +1,29 @@
+//Text Hiden
+@mixin textHidden( $pixels: -9999px ) {
+	overflow: hidden;
+	text-indent: $pixels;
+}
+
+//ClearFix :before & :after
+@mixin clearSelectors(){
+	content: "";
+	display: block;
+	height: 0;
+	clear: both;
+}
+@mixin clearFix( $position: both ) {
+	@if $position == before{
+		&:before{
+			@include clearSelectors();
+		}
+	}@else if $position == after{
+		&:after{
+			@include clearSelectors();
+		}
+	}@else if $position == both{
+		&:before, &:after{
+			@include clearSelectors();
+		}
+	}
+	zoom: 1;
+}

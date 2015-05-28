@@ -1,0 +1,6 @@
+// .container
+.container {
+	width: $widthContent;
+	margin: 0 auto;
+	@include clearFix();
+}
