@@ -1,7 +1,12 @@
+// styles for all elements
 * {
 	position: relative;
 	-moz-box-sizing: border-box;
 	-ms-box-sizing: border-box;
 	-o-box-sizing: border-box;
 	box-sizing: border-box;
+}
+html, body {
+	-ms-overflow-x: hidden;
+	overflow-x: hidden;
 }

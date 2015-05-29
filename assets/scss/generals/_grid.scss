@@ -1,6 +1,11 @@
 // .container
 .container {
-	width: $widthContent;
+	max-width: $desktop;
+	width: 100%;
 	margin: 0 auto;
 	@include clearFix();
+	&.full {
+		max-width: none;
+		@include clearFix();
+	}
 }

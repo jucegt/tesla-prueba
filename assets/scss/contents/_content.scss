@@ -1,0 +1,12 @@
+#content {
+	background-image: url( '../img/bg.png' );
+	background-repeat: no-repeat;
+	-webkit-background-size: 100% auto;
+	-o-background-size: 100% auto;
+	background-size: 100% auto;
+	padding-top: 140px;
+	background-color: $colorBlue;
+	@include mobile() {
+		padding-top: 85px;
+	}
+}

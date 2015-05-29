@@ -1,0 +1,150 @@
+// .slider
+.slider {
+	.slider_container {
+		background-image: url( '../img/sliderbg.png' );
+		-webkit-background-size: auto 100%;
+		-o-background-size: auto 100%;
+		background-size: auto 100%;
+		background-position: bottom;
+		background-repeat: repeat-x;
+		@include mobile() {
+			background-image: none;
+		}
+		.slide {
+			img {
+				width: 100%;
+				height: auto;
+				display: block;
+				@include mobile() {
+					margin-top: 15px;
+				}
+			}
+			.slide_content {
+				position: absolute;
+				top: -20px;
+				right: 0;
+				max-width: 35%;
+				z-index: 10;
+				@include mobile() {
+					position: relative;
+					top: auto;
+					max-width: none;
+					padding: 0 10px;
+					text-align: center;
+				}
+				@include tablet( portrait ) {
+					position: relative;
+					top: auto;
+					max-width: none;
+					padding: 0 10px;
+					text-align: center;
+				}
+				@include tablet( landscape ) {
+					max-width: 50%;
+					text-align: right;
+					padding: 0 20px 0 0;
+				}
+				h2, p {
+					font-family: 'Open Sans', Arial, sans-serif;
+					color: $colorWhite;
+					margin-top: 0;
+				}
+				h2 {
+					@include mobile() {
+						text-align: center;
+					}
+				}
+				p {
+					font-size: 12px;
+					@include mobile() {
+						text-align: justify;
+					}
+				}
+				.button {
+					display: inline-block;
+					line-height: 50px;
+					border: 2px solid $colorWhite;
+					padding: 0 20px;
+					color: $colorWhite;
+					text-transform: uppercase;
+					font-family: 'Open Sans', Arial, sans-serif;
+					text-decoration: none;
+					font-weight: bold;
+					border-radius: 3px;
+					-webkit-transition: all ease 0.5s;
+					-moz-transition: all ease 0.5s;
+					-ms-transition: all ease 0.5s;
+					-o-transition: all ease 0.5s;
+					transition: all ease 0.5s;
+					&:hover {
+						background-color: $colorWhite;
+						color: $colorBlue;
+					}
+				}
+			}
+			.slide_footer {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				width: 100%;
+				.widget {
+					width: 33.33%;
+					float: left;
+					padding: 0 20px;
+					margin-bottom: 50px;
+					@include mobile() {
+						margin-bottom: 8%;
+					}
+					h2 {
+						text-align: center;
+						font-family: 'Open Sans', Arial, sans-serif;
+						font-size: 100px;
+						color: $colorWhite;
+						font-weight: lighter;
+						margin: 0;
+						text-transform: uppercase;
+						line-height: 1em;
+						@include mobile() {
+							font-size: 18px;
+						}
+						@include mobile( landscape ) {
+							font-size: 35px;
+						}
+						@include tablet( portrait ) {
+							font-size: 70px;
+						}
+						small {
+							font-size: 35px;
+							vertical-align: top;
+							line-height: 1.7em;
+							@include mobile() {
+								font-size: 10px;
+							}
+							@include mobile( landscape ) {
+								font-size: 15px;
+							}
+							@include tablet( portrait ) {
+								font-size: 25px;
+							}
+						}
+						span {
+							display: block;
+							font-size: 14px;
+							line-height: 1em;
+							@include mobile() {
+								font-size: 10px;
+							}
+							@include mobile( landscape ) {
+								font-size: 12px;
+							}
+							@include tablet( portrait ) {
+								font-size: 14px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

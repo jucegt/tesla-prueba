@@ -1,0 +1,40 @@
+#footer {
+	.join {
+		text-align: center;
+		padding: 60px 0;
+		.button {
+			background-color: $colorBlue;
+			display: inline-block;
+			line-height: 60px;
+			padding: 0 25px;
+			border-radius: 5px;
+			font-family: 'Open Sans', Arial, sans-serif;
+			text-transform: uppercase;
+			text-decoration: none;
+			color: $colorWhite;
+			@include transition( all ease 0.5s );
+			&:hover {
+				background-color: darken( $colorBlue, 10% );
+			}
+		}
+		p {
+			font-family: 'Open Sans', Arial, sans-serif;
+			font-size: 13px;
+			color: $colorBlue;
+			margin-bottom: 0;
+		}
+	}
+	.footerlogo {
+		background-color: $colorBlue;
+		padding: 10px 0;
+		a {
+			display: block;
+			margin: 0 auto;
+			width: 52px;
+			height: 49px;
+			overflow: hidden;
+			text-indent: -9999px;
+			background-image: url( '../img/logofooter.png' );
+		}
+	}
+}

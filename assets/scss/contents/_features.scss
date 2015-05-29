@@ -1,0 +1,48 @@
+// .features
+.features {
+	.features_row {
+		@include clearFix();
+		@include mobile() {
+			border-bottom: 5px solid $colorBlue;
+		}
+		div {
+			width: 50%;
+			float: left;
+			@include mobile() {
+				width: 100%;
+				float: none;
+			}
+		}
+		.picture {
+			img {
+				width: 100%;
+				height: auto;
+				display: block;
+			}
+		}
+		.text {
+			padding: 40px 20px;
+			@include mobile() {
+				padding: 10px;
+			}
+			@include tablet() {
+				padding: 20px 20px 0 20px;
+			}
+			h3, p {
+				font-family: 'Open Sans', Arial, sans-serif;
+				color: $colorWhite;
+			}
+			h3 {
+				@include mobile() {
+					margin-top: 0;
+				}
+				@include tablet() {
+					margin-top: 0;
+				}
+			}
+			p {
+				font-size: 12px;
+			}
+		}
+	}
+}

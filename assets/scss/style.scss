@@ -1,4 +1,12 @@
 @import 'modules/base';
+
 @import 'generals/normalize';
 @import 'generals/elements';
+
 @import 'generals/grid';
+@import 'generals/header';
+@import 'generals/footer';
+
+@import 'contents/content';
+@import 'contents/slider';
+@import 'contents/features';

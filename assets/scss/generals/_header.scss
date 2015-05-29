@@ -7,6 +7,13 @@
 	width: 100%;
 	padding: 30px 0;
 	z-index: 5;
+	@include mobile() {
+		padding: 20px 10px;
+		z-index: 11;
+	}
+	@include tablet() {
+		padding: 30px 20px;
+	}
 
 	// .logo
 	.logo {
@@ -27,24 +34,70 @@
 	// .nav
 	.nav {
 		float: right;
+		@include mobile() {
+			display: none;
+			position: absolute;
+			float: none;
+			top: 120%;
+			left: 10px;
+			right: 10px;
+			background-color: $colorWhite;
+			-webkit-border-radius: 3px;
+			border-radius: 3px;
+			z-index: 10;
+		}
 		ul {
 			margin: 0;
 			list-style-type: none;
+			@include clearFix();
+			padding-left: 0;
 			li {
 				float: left;
 				padding: 10px 0;
 				margin: 0 20px;
 				font-family: 'Myriad Pro', Arial, sans-serif;
 				text-transform: uppercase;
+				@include mobile() {
+					width: 50%;
+					margin: 0;
+					padding: 0;
+				}
 				a {
-					color: #fff;
+					color: $colorWhite;
 					text-decoration: none;
-					opacity: 0.7;
+					opacity: 0.5;
+					-webkit-transition: all ease 0.5s;
+					-moz-transition: all ease 0.5s;
+					-ms-transition: all ease 0.5s;
+					-o-transition: all ease 0.5s;
+					transition: all ease 0.5s;
+					@include mobile() {
+						display: block;
+						color: $colorBlue;
+						padding: 15px;
+						opacity: 1;
+					}
 					&:hover {
 						opacity: 1;
 					}
 				}
 			}
+		}
+	}
+
+	// .mobile_button
+	.mobile_button {
+		display: none;
+		@include mobile() {
+			cursor: pointer;
+			display: block;
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 40px;
+			height: 40px;
+			background-image: url( '../img/menumobile.png' );
+			background-repeat: no-repeat;
 		}
 	}
 }
